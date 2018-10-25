@@ -59,3 +59,25 @@ sysctl -p
 重新启动，成功。
 
 参考链接：https://www.cnblogs.com/yehui/p/9087845.html
+
+#kibaba 外网访问
+kibana安装后外网无法访问： 
+修改config/kibaba.yml下的server.host为0.0.0.0
+
+启动kibana后关闭shell窗口后kibana自动关闭的解决办法”: 
+主要涉及到启动kibana后关闭shell窗口后kibana自动关闭的解决办法方面的内容，对于启动kibana后关闭shell窗口后kibana自动关闭的解决办法感兴趣的同学可以参考一下。
+
+后台启动kibana(加上&) 
+kibana-4.5.2-linux-x64/bin/kibana &
+
+注意：这时加上了&虽然执行了后台启动，但是还是有日志打印出来，使用ctrl+c可以退出。 
+但是如果直接关闭了Xshell,这时服务也会停止，访问http://yourip:5601就失败了。
+
+解决方法： 
+执行了kibana-4.5.2-linux-x64/bin/kibana &命令后，不使用ctrl+c去退出日志， 
+而是使用exit;这样即使关闭了shell窗口kibana服务也不会挂了。
+--------------------- 
+作者：u010466329 
+来源：CSDN 
+原文：https://blog.csdn.net/u010466329/article/details/78594777 
+
