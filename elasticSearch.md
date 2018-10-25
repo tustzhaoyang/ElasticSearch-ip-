@@ -57,3 +57,5 @@ vm.max_map_count=655360
 sysctl -p
 
 重新启动，成功。
+
+参考链接：https://www.cnblogs.com/yehui/p/9087845.html
